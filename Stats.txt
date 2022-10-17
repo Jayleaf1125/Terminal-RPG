@@ -1,4 +1,5 @@
 Name: Jason
-Health: 77
-Attack: 1
-Defense: 9
+Magic: Water
+Health: 41
+Attack: 3
+Defense: 1

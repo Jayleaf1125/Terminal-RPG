@@ -13,9 +13,10 @@ class Wizard
     int currentExpAmount = 0;
     int expBar = 25;
     int level = 1;
-    public Wizard(string Name)
+    public Wizard(string Name, string Magic)
     {
         name = Name;
+        magic = Magic;
         health = Experience.RollStats(1, 100);
         attack = Experience.RollStats(1, 10);
         defense = Experience.RollStats(1, 10);
@@ -24,6 +25,7 @@ class Wizard
     public void ReadStats()
     {
         string writeText = @$"Name: {name}
+Magic: {magic}
 Health: {health}
 Attack: {attack}
 Defense: {defense}";
@@ -35,23 +37,15 @@ Defense: {defense}";
 
     public void SelectMagic()
     {
-        bool selection = true;
-
-        while (selection)
-        {
-            Console.WriteLine("Choose your magic: Fire or Water?");
-            string magic = Console.ReadLine();
             switch (magic)
             {
                 case "Fire":
                     magic = "Fire";
                     spells.Add("Ember", 2);
-                    selection = false;
                     break;
                 case "Water":
                     magic = "Water";
                     spells.Add("Water Gun", 2);
-                    selection = false;
                     break;
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -60,7 +54,6 @@ Defense: {defense}";
                     break;
             }
         }
-    }
 
     public void SpellBook()
     {
@@ -120,48 +113,48 @@ Damage: {spell.Value}");
         Console.WriteLine($"Defense increased by {defenseStatIncrease}");
         Console.ForegroundColor = ConsoleColor.White;
 
-    }
+        LearningNewMagic();
 
+    }
     private void LearningNewMagic()
     {
-        // Fire Spells
-        if (magic == "Fire" && level == 3)
+        if (level == 3)
         {
-            Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine("You just learned Fire Ball");
-            spells.Add("Fire Ball", 3);
-            Console.ForegroundColor = ConsoleColor.White;
-            return;
+            switch (magic)
+            {
+                case "Fire":
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("You just learned Fire Ball");
+                    spells.Add("Fire Ball", 3);
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+                case "Water":
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("You just learned Aqua Tail");
+                    spells.Add("Aqua Tail", 3);
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+            }
         }
 
-        if (magic == "Fire" && level == 6)
+        if (level == 6)
         {
-            Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine("You just learned Sacred Fire");
-            spells.Add("Sacred Fire", 5);
-            Console.ForegroundColor = ConsoleColor.White;
-            return;
+            switch (magic)
+            {
+                case "Fire":
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("You just learned Sacred Fire");
+                    spells.Add("Sacred Fire", 5);
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+                case "Water":
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine("You just learned Hydro Pump");
+                    spells.Add("Hydro Pump", 5);
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+            }
         }
-
-        // Water Spells
-        if (magic == "Water" && level == 3)
-        {
-            Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine("You just learned Aqua Tail");
-            spells.Add("Aqua Tail", 3);
-            Console.ForegroundColor = ConsoleColor.White;
-            return;
-        }
-
-        if (magic == "Water" && level == 6)
-        {
-            Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine("You just learned Hydro Pump");
-            spells.Add("Hydro Pump", 5);
-            Console.ForegroundColor = ConsoleColor.White;
-            return;
-        }
-        Console.WriteLine("Not enough levels");
     }
 }
 
@@ -189,7 +182,9 @@ static class Game
     {
         Console.WriteLine("What is your name?");
         string name = Console.ReadLine();
-        Wizard wiz = new Wizard(name);
+        Console.WriteLine("Choose your magic: Fire or Water?");
+        string magic = Console.ReadLine();
+        Wizard wiz = new Wizard(name, magic);
         wiz.SelectMagic();
         wiz.ReadStats();
 
