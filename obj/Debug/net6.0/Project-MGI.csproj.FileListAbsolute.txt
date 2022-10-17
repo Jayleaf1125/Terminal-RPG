@@ -1,0 +1,15 @@
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\bin\Debug\net6.0\Project-MGI.exe
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\bin\Debug\net6.0\Project-MGI.deps.json
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\bin\Debug\net6.0\Project-MGI.runtimeconfig.json
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\bin\Debug\net6.0\Project-MGI.dll
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\bin\Debug\net6.0\Project-MGI.pdb
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\obj\Debug\net6.0\Project-MGI.csproj.AssemblyReference.cache
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\obj\Debug\net6.0\Project-MGI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\obj\Debug\net6.0\Project-MGI.AssemblyInfoInputs.cache
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\obj\Debug\net6.0\Project-MGI.AssemblyInfo.cs
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\obj\Debug\net6.0\Project-MGI.csproj.CoreCompileInputs.cache
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\obj\Debug\net6.0\Project-MGI.dll
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\obj\Debug\net6.0\refint\Project-MGI.dll
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\obj\Debug\net6.0\Project-MGI.pdb
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\obj\Debug\net6.0\Project-MGI.genruntimeconfig.cache
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\obj\Debug\net6.0\ref\Project-MGI.dll
