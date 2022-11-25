@@ -1,3 +1,6 @@
+using System;
+using System.IO;
+using System.Collections.Generic;
 using Experiences;
 
 namespace Character
@@ -46,6 +49,14 @@ Defense: {defense}";
                 case "Water":
                     magic = "Water";
                     spells.Add("Water Gun", 2);
+                    break;
+                case "Wind":
+                    magic = "Wind";
+                    spells.Add("Gust", 2);
+                    break;
+                case "Earth":
+                    magic = "Earth";
+                    spells.Add("Rock Sling", 2);
                     break;
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -134,6 +145,18 @@ Damage: {spell.Value}");
                         spells.Add("Aqua Tail", 3);
                         Console.ForegroundColor = ConsoleColor.White;
                         break;
+                    case "Earth":
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.WriteLine("You just learned Rock Smash");
+                        spells.Add("Rock Smash", 3);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        break;
+                    case "Wind":
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.WriteLine("You just learned Air Cutter");
+                        spells.Add("Air Cutter", 3);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        break;
                 }
             }
 
@@ -151,6 +174,18 @@ Damage: {spell.Value}");
                         Console.ForegroundColor = ConsoleColor.DarkGray;
                         Console.WriteLine("You just learned Hydro Pump");
                         spells.Add("Hydro Pump", 5);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        break;
+                    case "Earth":
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.WriteLine("You just learned Magnitude");
+                        spells.Add("Magnitude", 5);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        break;
+                    case "Wind":
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.WriteLine("You just learned Whirlwind");
+                        spells.Add("Whirlwind", 5);
                         Console.ForegroundColor = ConsoleColor.White;
                         break;
                 }
