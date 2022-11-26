@@ -1,5 +1,5 @@
 Name: J
 Magic: Fire
-Health: 86
-Attack: 5
-Defense: 5
+Health: 88
+Attack: 3
+Defense: 1

@@ -45,7 +45,7 @@ namespace Character
         {
             name = Name;
             magic = Magic;
-            health = Experience.RollStats(1, 100);
+            health = Experience.RollStats(50, 100);
             attack = Experience.RollStats(1, 10);
             defense = Experience.RollStats(1, 10);
         }

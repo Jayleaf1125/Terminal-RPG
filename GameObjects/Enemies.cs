@@ -13,7 +13,7 @@ namespace Enemies
             get { return type; }
             set { type = value; }
         }
-        public Dictionary<string, int> attacks = new Dictionary<string, int>();
+        public Dictionary<int, int> attacks = new Dictionary<int, int>();
         int health;
         public int Health
         {
@@ -21,7 +21,17 @@ namespace Enemies
             set { health = value; }
         }
         int attack;
+        public int Attack
+        {
+            get { return attack; }
+            set { attack = value; }
+        }
         int defense;
+        public int Defense
+        {
+            get { return defense; }
+            set { defense = value; }
+        }
 
         public Enemy(string Type)
         {
@@ -34,29 +44,30 @@ namespace Enemies
                     health = Experience.RollStats(1, 25);
                     attack = Experience.RollStats(1, 10);
                     defense = Experience.RollStats(1, 10);
-                    attacks.Add("Scratch", 2);
-                    attacks.Add("Bite", 3);
+                    // Scratch
+                    attacks.Add(0, 2);
+                    // Bite
+                    attacks.Add(1, 3);
                     break;
                 case "spider":
                     health = Experience.RollStats(10, 50);
-                    attack = Experience.RollStats(7, 20);
-                    defense = Experience.RollStats(1, 10);
-                    attacks.Add("Crunch", 3);
-                    attacks.Add("String Shot", 4);
+                    attack = Experience.RollStats(5, 20);
+                    defense = Experience.RollStats(5, 20);
+                    // Crunch
+                    attacks.Add(0, 3);
+                    // String Shot
+                    attacks.Add(1, 4);
                     break;
                 case "golem":
                     health = Experience.RollStats(50, 100);
-                    attack = Experience.RollStats(10, 25);
-                    defense = Experience.RollStats(1, 15);
-                    attacks.Add("Punch", 5);
-                    attacks.Add("Slam", 7);
+                    attack = Experience.RollStats(10, 30);
+                    defense = Experience.RollStats(10, 15);
+                    // Punch
+                    attacks.Add(0, 5);
+                    // Slam
+                    attacks.Add(1, 7);
                     break;
             }
-        }
-
-        public void LoseHealth(int damage)
-        {
-            health -= damage;
         }
     }
 }
