@@ -8,11 +8,36 @@ namespace Character
     class Wizard
     {
         string name;
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
         string magic;
         Dictionary<string, int> spells = new Dictionary<string, int>();
+        public Dictionary<string, int> Spells
+        {
+            get
+            {
+                return spells;
+            }
+        }
         int health;
+        public int Health
+        {
+            get { return health; }
+            set { health = value; }
+        }
         int attack;
+        public int Attack
+        {
+            get { return attack; }
+        }
         int defense;
+        public int Defense
+        {
+            get { return defense; }
+        }
         int currentExpAmount = 0;
         int expBar = 25;
         int level = 1;

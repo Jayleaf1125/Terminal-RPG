@@ -8,8 +8,18 @@ namespace Enemies
     class Enemy
     {
         string type;
+        public string Type
+        {
+            get { return type; }
+            set { type = value; }
+        }
         public Dictionary<string, int> attacks = new Dictionary<string, int>();
         int health;
+        public int Health
+        {
+            get { return health; }
+            set { health = value; }
+        }
         int attack;
         int defense;
 
@@ -42,6 +52,11 @@ namespace Enemies
                     attacks.Add("Slam", 7);
                     break;
             }
+        }
+
+        public void LoseHealth(int damage)
+        {
+            health -= damage;
         }
     }
 }

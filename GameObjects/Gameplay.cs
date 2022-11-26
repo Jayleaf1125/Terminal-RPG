@@ -44,7 +44,7 @@ namespace Gameplay
                         Game.Help();
                         break;
                     case "adventure":
-                        Game.EnterAdventureWorld();
+                        Game.EnterAdventureWorld(player);
                         break;
                     case "end":
                         gamePlay = false;
@@ -62,7 +62,7 @@ end command - Ends current play session");
             Console.ForegroundColor = ConsoleColor.White;
         }
 
-        static void EnterAdventureWorld()
+        static void EnterAdventureWorld(Wizard player)
         {
             // Select your world
             Console.WriteLine("Select your adventure: Plains, Caves, or Unknown");
@@ -71,10 +71,10 @@ end command - Ends current play session");
             switch (world)
             {
                 case ("Plains"):
-                    Adventure.Plains();
+                    Adventure.Plains(player);
                     break;
                 case "Caves":
-                    Adventure.Caves();
+                    Adventure.Caves(player);
                     break;
             }
             // Depending on user's input, run the world
