@@ -42,17 +42,17 @@ namespace Enemies
             {
                 case "rat":
                     health = Experience.RollStats(1, 25);
-                    attack = Experience.RollStats(1, 10);
-                    defense = Experience.RollStats(1, 10);
+                    attack = Experience.RollStats(1, 5);
+                    defense = Experience.RollStats(1, 5);
                     // Scratch
                     attacks.Add(0, 2);
                     // Bite
                     attacks.Add(1, 3);
                     break;
                 case "spider":
-                    health = Experience.RollStats(10, 50);
-                    attack = Experience.RollStats(5, 20);
-                    defense = Experience.RollStats(5, 20);
+                    health = Experience.RollStats(25, 50);
+                    attack = Experience.RollStats(5, 15);
+                    defense = Experience.RollStats(5, 15);
                     // Crunch
                     attacks.Add(0, 3);
                     // String Shot
@@ -60,8 +60,8 @@ namespace Enemies
                     break;
                 case "golem":
                     health = Experience.RollStats(50, 100);
-                    attack = Experience.RollStats(10, 30);
-                    defense = Experience.RollStats(10, 15);
+                    attack = Experience.RollStats(15, 30);
+                    defense = Experience.RollStats(15, 30);
                     // Punch
                     attacks.Add(0, 5);
                     // Slam

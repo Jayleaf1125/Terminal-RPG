@@ -28,6 +28,12 @@ namespace Character
             get { return health; }
             set { health = value; }
         }
+        int maxHealth;
+        public int MaxHealth
+        {
+            get {return maxHealth;}
+            set { maxHealth = value;}
+        }
         int attack;
         public int Attack
         {
@@ -45,7 +51,8 @@ namespace Character
         {
             name = Name;
             magic = Magic;
-            health = Experience.RollStats(50, 100);
+            maxHealth = Experience.RollStats(50, 100);
+            health = maxHealth;
             attack = Experience.RollStats(1, 10);
             defense = Experience.RollStats(1, 10);
         }
@@ -133,18 +140,19 @@ Damage: {spell.Value}");
             expBar += 25;
 
             // Increasing Stats
-            int healthStatIncrease = Experience.RollStats(1, 10);
+            int maxHealthStatIncrease = Experience.RollStats(1, 10);
             int attackStatIncrease = Experience.RollStats(1, 5);
             int defenseStatIncrease = Experience.RollStats(1, 5);
 
-            health += healthStatIncrease;
+            maxHealth += maxHealthStatIncrease;
+            health = maxHealth;
             attack += attackStatIncrease;
             defense += defenseStatIncrease;
 
-
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine($"You Leveled Up! You are now Level {level}");
-            Console.WriteLine($"Health increased by {healthStatIncrease}");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine($"Health increased by {maxHealthStatIncrease}");
             Console.WriteLine($"Attack increased by {attackStatIncrease}");
             Console.WriteLine($"Defense increased by {defenseStatIncrease}");
             Console.ForegroundColor = ConsoleColor.White;

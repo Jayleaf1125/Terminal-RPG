@@ -1,5 +1,5 @@
-Name: J
+Name: Jason
 Magic: Fire
-Health: 88
-Attack: 3
-Defense: 1
+Health: 97
+Attack: 7
+Defense: 8

@@ -17,15 +17,15 @@ namespace Adventures
 
             Enemy currentEnemy = mob1;
 
-            while (player.Health > 0)
+            while (player.Health >= 0)
             {
                 // Display
                 Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.BackgroundColor = ConsoleColor.DarkGray;
                 Console.WriteLine(@$"Combat: _____
             
 {currentEnemy.Type}: {currentEnemy.Health} hp             
-
 {player.Name}: {player.Health} hp");
 
                 Console.WriteLine();
@@ -37,9 +37,11 @@ namespace Adventures
                 Console.WriteLine();
                 // Choosen a move
                 string selectingSpell = Console.ReadLine();
+                int random_enemy_move = Experience.RollStats(1, 2);
 
                 if (selectingSpell == "end")
                 {
+                    Console.BackgroundColor = ConsoleColor.Black;
                     Console.ForegroundColor = ConsoleColor.White;
                     return;
                 }
@@ -54,7 +56,6 @@ namespace Adventures
                     Console.WriteLine($"You have dealt {player_damage} to the {currentEnemy.Type}");
 
                     // Computer randomly selects enemy's moves
-                    int random_enemy_move = Experience.RollStats(1, 2);
 
                     switch (random_enemy_move)
                     {
@@ -65,7 +66,7 @@ namespace Adventures
                             Console.WriteLine($"{currentEnemy.Type} have dealt {enemy_damage} to the you");
                             break;
                         case 1:
-                            int enemy_damage1 = (currentEnemy.attacks[1] + currentEnemy.Attack) - player.Defense;
+                            int enemy_damage1 = Math.Abs((currentEnemy.attacks[1] + currentEnemy.Attack) - player.Defense);
 
                             player.Health -= enemy_damage1;
                             Console.WriteLine($"{currentEnemy.Type} have dealt {enemy_damage1} to the you");
@@ -96,16 +97,29 @@ namespace Adventures
 
                 if (currentEnemy.Health <= 0 && currentEnemy == boss)
                 {
+                    Console.WriteLine();
                     Console.WriteLine("You have completed the Plains!");
                     player.AddExpToBar();
+                    Console.BackgroundColor = ConsoleColor.Black;
                     Console.ForegroundColor = ConsoleColor.White;
                     return;
                 }
                 // End the adventure when you die
             }
+            Console.WriteLine();
+            Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("You have died");
-            Game.StartGame();
+            Console.WriteLine("You have died, do you want to start over? Yes or No");
+            string restartGame = Console.ReadLine();
+
+            if (restartGame == "Yes")
+            {
+                Game.StartGame();
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
         }
 
         static public void Caves(Wizard player)
