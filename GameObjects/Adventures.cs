@@ -41,10 +41,26 @@ namespace Adventures
             }
         }
 
+        static public void BoilingPoint(Wizard player)
+        {
+            Dictionary<string, Enemy> enemies = new Dictionary<string, Enemy>(){
+                {"mob1", new Enemy("golem")},
+                {"mob2", new Enemy("golem")},
+                {"mob3", new Enemy("golem")},
+                {"mob4", new Enemy("golem")},
+                {"boss", new Enemy("demon")},
+            };
+
+            foreach (var enemy in enemies)
+            {
+                Adventure.Combat(player, enemy.Key, enemy.Value);
+            }
+        }
+
         static private void Combat(Wizard player, string enemy_name, Enemy enemy)
         {
 
-            while (player.Health >= 0)
+            while (player.Health > 0)
             {
                 // Display
                 Console.WriteLine();
@@ -59,14 +75,13 @@ namespace Adventures
                 Console.Write("Select a move: ");
                 foreach (KeyValuePair<string, int> spell in player.Spells)
                 {
-                    Console.Write($"{spell.Key}, ");
+                    Console.Write($"{spell.Key} or ");
                 }
-                Console.WriteLine();
                 Console.WriteLine();
 
                 // Choosen a move
                 string selectingSpell = Console.ReadLine();
-                int random_enemy_move = Experience.RollStats(1, 2);
+                int random_enemy_move = Experience.RollStats(0, 2);
 
                 if (selectingSpell == "end")
                 {
@@ -107,10 +122,9 @@ namespace Adventures
                     Console.WriteLine();
                     Console.WriteLine("You have completed the Plains!");
                     player.AddExpToBar();
-                    Console.WriteLine();
-                    Console.WriteLine();
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine();
                     return;
                 }
 

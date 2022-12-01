@@ -67,6 +67,15 @@ namespace Enemies
                     // Slam
                     attacks.Add(1, 7);
                     break;
+                case "demon":
+                    health = Experience.RollStats(75, 125);
+                    attack = Experience.RollStats(30, 45);
+                    defense = Experience.RollStats(30, 45);
+                    // Slash
+                    attacks.Add(0, 7);
+                    // Demon's Breath
+                    attacks.Add(1, 10);
+                    break;
             }
         }
     }

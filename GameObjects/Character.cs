@@ -31,8 +31,8 @@ namespace Character
         int maxHealth;
         public int MaxHealth
         {
-            get {return maxHealth;}
-            set { maxHealth = value;}
+            get { return maxHealth; }
+            set { maxHealth = value; }
         }
         int attack;
         public int Attack

@@ -65,16 +65,19 @@ end command - Ends current play session");
         static void EnterAdventureWorld(Wizard player)
         {
             // Select your world
-            Console.WriteLine("Select your adventure: Plains, Caves, or Unknown");
+            Console.WriteLine("Select your adventure: Plains, Caves, or BoilingPoint");
             string world = Console.ReadLine();
 
             switch (world)
             {
-                case ("Plains"):
+                case "Plains":
                     Adventure.Plains(player);
                     break;
                 case "Caves":
                     Adventure.Caves(player);
+                    break;
+                case "BoilingPoint":
+                    Adventure.BoilingPoint(player);
                     break;
             }
             // Depending on user's input, run the world
