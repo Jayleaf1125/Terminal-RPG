@@ -1,5 +1,5 @@
 Name: Jason
 Magic: Fire
-Health: 97
-Attack: 7
+Health: 64
+Attack: 8
 Defense: 8

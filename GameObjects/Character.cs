@@ -53,8 +53,8 @@ namespace Character
             magic = Magic;
             maxHealth = Experience.RollStats(50, 100);
             health = maxHealth;
-            attack = Experience.RollStats(1, 10);
-            defense = Experience.RollStats(1, 10);
+            attack = Experience.RollStats(5, 10);
+            defense = Experience.RollStats(5, 10);
         }
 
         public void ReadStats()
