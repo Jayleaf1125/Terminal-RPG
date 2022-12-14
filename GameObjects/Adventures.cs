@@ -66,7 +66,7 @@ namespace Adventures
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.BackgroundColor = ConsoleColor.DarkGray;
-                Console.WriteLine(@$"Combat: _____
+                Console.WriteLine(@$"COMBAT =|>
             
 {enemy.Type}: {enemy.Health} hp             
 {player.Name}: {player.Health} hp");
@@ -155,6 +155,28 @@ namespace Adventures
                 Environment.Exit(0);
             }
 
+        }
+
+        static void EscapeAdventure(Wizard player) {
+            // Prompt to escape
+            System.Console.WriteLine("Do you want to escape?");
+            string escapeDecision = Console.ReadLine();
+
+            if(escapeDecision == "No") {
+                return;
+            }
+            // Chance Rolls
+            int isSuccessFul = Experience.RollStats(0, 2);
+
+            if(isSuccessFul == 1) {
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.WriteLine($"{player.Name} has escaped");
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
+                return;
+            } else {
+                System.Console.WriteLine($"{player.Name} has failed to escape");
+            }
         }
     }
 }

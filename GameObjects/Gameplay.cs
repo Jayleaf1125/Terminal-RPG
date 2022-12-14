@@ -56,9 +56,10 @@ namespace Gameplay
         static void Help()
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine(@$"read command - Displays your stats
-spellbook command - Displays your spells
-end command - Ends current play session");
+            Console.WriteLine(@$"read - Displays your stats
+spellbook - Displays your spells
+end - Ends current play session
+adventure - Enter a world to fight monsters");
             Console.ForegroundColor = ConsoleColor.White;
         }
 

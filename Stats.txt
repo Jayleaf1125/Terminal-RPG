@@ -1,5 +1,5 @@
-Name: Jason
-Magic: Fire
-Health: 71
-Attack: 9
-Defense: 9
+Name: j
+Magic: j
+Health: 96
+Attack: 8
+Defense: 5

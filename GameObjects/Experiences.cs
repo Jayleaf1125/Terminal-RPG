@@ -8,7 +8,7 @@ namespace Experiences
         public static int ExpGain()
         {
             Random rnd = new Random();
-            int experience = rnd.Next(1, 15);
+            int experience = rnd.Next(1, 35);
             return experience;
         }
 
