@@ -94,6 +94,8 @@ Defense: {defense}";
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("WRONG CHOICE, YOUNG ONE!");
                     Console.ForegroundColor = ConsoleColor.White;
+                    magic = "None";
+                    spells.Add("Punch", 2);
                     break;
             }
         }
@@ -169,25 +171,31 @@ Damage: {spell.Value}");
                     case "Fire":
                         Console.ForegroundColor = ConsoleColor.DarkGray;
                         Console.WriteLine("You just learned Fire Ball");
-                        spells.Add("Fire Ball", 3);
+                        spells.Add("Fire Ball", 5);
                         Console.ForegroundColor = ConsoleColor.White;
                         break;
                     case "Water":
                         Console.ForegroundColor = ConsoleColor.DarkGray;
                         Console.WriteLine("You just learned Aqua Tail");
-                        spells.Add("Aqua Tail", 3);
+                        spells.Add("Aqua Tail", 5);
                         Console.ForegroundColor = ConsoleColor.White;
                         break;
                     case "Earth":
                         Console.ForegroundColor = ConsoleColor.DarkGray;
                         Console.WriteLine("You just learned Rock Smash");
-                        spells.Add("Rock Smash", 3);
+                        spells.Add("Rock Smash", 5);
                         Console.ForegroundColor = ConsoleColor.White;
                         break;
                     case "Wind":
                         Console.ForegroundColor = ConsoleColor.DarkGray;
                         Console.WriteLine("You just learned Air Cutter");
-                        spells.Add("Air Cutter", 3);
+                        spells.Add("Air Cutter", 5);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        break;
+                    case "None":
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.WriteLine("You just learned Kick");
+                        spells.Add("Kick", 5);
                         Console.ForegroundColor = ConsoleColor.White;
                         break;
                 }
@@ -200,25 +208,31 @@ Damage: {spell.Value}");
                     case "Fire":
                         Console.ForegroundColor = ConsoleColor.DarkGray;
                         Console.WriteLine("You just learned Sacred Fire");
-                        spells.Add("Sacred Fire", 5);
+                        spells.Add("Sacred Fire", 7);
                         Console.ForegroundColor = ConsoleColor.White;
                         break;
                     case "Water":
                         Console.ForegroundColor = ConsoleColor.DarkGray;
                         Console.WriteLine("You just learned Hydro Pump");
-                        spells.Add("Hydro Pump", 5);
+                        spells.Add("Hydro Pump", 7);
                         Console.ForegroundColor = ConsoleColor.White;
                         break;
                     case "Earth":
                         Console.ForegroundColor = ConsoleColor.DarkGray;
                         Console.WriteLine("You just learned Magnitude");
-                        spells.Add("Magnitude", 5);
+                        spells.Add("Magnitude", 7);
                         Console.ForegroundColor = ConsoleColor.White;
                         break;
                     case "Wind":
                         Console.ForegroundColor = ConsoleColor.DarkGray;
                         Console.WriteLine("You just learned Whirlwind");
-                        spells.Add("Whirlwind", 5);
+                        spells.Add("Whirlwind", 7);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        break;
+                    case "None":
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.WriteLine("You just learned Haymaker");
+                        spells.Add("Haymaker", 7);
                         Console.ForegroundColor = ConsoleColor.White;
                         break;
                 }

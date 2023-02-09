@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Kr5JjmgCSLwej3jg23uuxTcWo0I743qLfc7k19yXy+YibqWn6tcK/ArWW8f2IDU/1aknDicoKdvyPt5d+rhj8g==",
+  "dgSpecHash": "iJTbPwGMPSjTTdTCSo9Mr3RhtMl8rRLQ6vRAx5Ax3k14AB7eyO6MDVPinF935k60qBEYwEnbAcD8Nm8ADF+AmQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jason\\Desktop\\Magic Game Terminal\\Project-MGI\\Project-MGI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Jason\\.nuget\\packages\\nstack.core\\1.0.3\\nstack.core.1.0.3.nupkg.sha512",
+    "C:\\Users\\Jason\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\Jason\\.nuget\\packages\\terminal.gui\\1.8.2\\terminal.gui.1.8.2.nupkg.sha512"
+  ],
   "logs": []
 }

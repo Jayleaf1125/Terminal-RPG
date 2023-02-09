@@ -37,7 +37,7 @@ namespace Gameplay
                     case "gain":
                         player.AddExpToBar();
                         break;
-                    case "view exp":
+                    case "view":
                         player.ViewExpBar();
                         break;
                     case "help":
@@ -59,13 +59,15 @@ namespace Gameplay
             Console.WriteLine(@$"read - Displays your stats
 spellbook - Displays your spells
 end - Ends current play session
-adventure - Enter a world to fight monsters");
+adventure - Enter a world to fight monsters
+view - Views current exp
+
+Secret Command - Hint: it rhymes with main");
             Console.ForegroundColor = ConsoleColor.White;
         }
 
         static void EnterAdventureWorld(Wizard player)
         {
-            // Select your world
             Console.WriteLine("Select your adventure: Plains, Caves, or BoilingPoint");
             string world = Console.ReadLine();
 
@@ -81,7 +83,6 @@ adventure - Enter a world to fight monsters");
                     Adventure.BoilingPoint(player);
                     break;
             }
-            // Depending on user's input, run the world
         }
     }
 }

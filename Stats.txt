@@ -1,5 +1,5 @@
-Name: j
-Magic: j
-Health: 96
-Attack: 8
-Defense: 5
+Name: k
+Magic: None
+Health: 83
+Attack: 9
+Defense: 7

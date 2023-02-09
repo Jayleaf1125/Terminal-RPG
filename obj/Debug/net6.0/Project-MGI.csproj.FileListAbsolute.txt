@@ -13,3 +13,9 @@ C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\obj\Debug\net6.0\refint\P
 C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\obj\Debug\net6.0\Project-MGI.pdb
 C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\obj\Debug\net6.0\Project-MGI.genruntimeconfig.cache
 C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\obj\Debug\net6.0\ref\Project-MGI.dll
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\bin\Debug\net6.0\NStack.dll
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\bin\Debug\net6.0\Terminal.Gui.dll
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\bin\Debug\net6.0\fr-FR\Terminal.Gui.resources.dll
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\bin\Debug\net6.0\ja-JP\Terminal.Gui.resources.dll
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\bin\Debug\net6.0\pt-PT\Terminal.Gui.resources.dll
+C:\Users\Jason\Desktop\Magic Game Terminal\Project-MGI\obj\Debug\net6.0\Project-MGI.csproj.CopyComplete
