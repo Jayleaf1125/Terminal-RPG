@@ -1,5 +1,5 @@
-Name: k
+Name: end
 Magic: None
-Health: 83
-Attack: 9
-Defense: 7
+Health: 74
+Attack: 8
+Defense: 5
